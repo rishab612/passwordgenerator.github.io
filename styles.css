@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f06, #00f);
+}
+
+.password-generator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.password-output {
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.password-output input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+.password-output button {
+    padding: 10px;
+    font-size: 16px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.password-output button:hover {
+    background: #218838;
+}
+
+.options {
+    margin-bottom: 15px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option label {
+    font-size: 16px;
+}
+
+#generate-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-btn:hover {
+    background: #0069d9;
+}
+
+.strength-meter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#strength-bar {
+    flex-grow: 1;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#strength-label {
+    font-size: 16px;
+}
+
+/* Existing CSS remains unchanged */
+#strength-bar {
+    flex-grow: 1;
+    height: 10px;
+    background: #ccc; /* Default color */
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+/* Existing CSS remains unchanged */
+
+.user-password-check {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-password-check input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.user-password-check button {
+    padding: 10px;
+    font-size: 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-password-check button:hover {
+    background: #0069d9;
+}
+
+/* Popup Container */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    animation: popup-animation 0.3s ease-out;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Popup animation */
+@keyframes popup-animation {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
